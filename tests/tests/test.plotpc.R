@@ -27,7 +27,8 @@ plotpc(x, main="test plotpc",
 
 library(alr3) # get banknote data
 data(banknote)
-plotld(banknote[,-7], npc=10) # -6 to drop Y
+plotld(banknote[,-7], npc=10) # -7 to drop Y
+plotld(banknote[,-7], abs.=TRUE)
 
 # Flury and Riedwyl "Multivariate Statistics A Practical Approach" figure 10.2
 x <- banknote[101:200,4:5] # select Forged, Top and Bottom

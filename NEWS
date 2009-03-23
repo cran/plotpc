@@ -1,6 +1,11 @@
 Changes to plotpc Package
 -------------------------
 
+1.0-2 March 23, 2009
+
+Added "abs." argument to plotld
+Doc touchups
+
 1.0-0 March 04, 2009
 
 Initial release

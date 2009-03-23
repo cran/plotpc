@@ -7,12 +7,15 @@ plotld <- function(x,  # x is passed directly to princomp
     lwd=4 / 1:npc,
     col=gray(0:(npc-1) / npc),
     ylim=range(loadings),
+    abs.=FALSE,
     cex=.8,
-    ylab="loading",
+    ylab=if(abs.) "abs(loading)" else "loading",
     legend.x=NULL,
     legend.y=NULL)
 {
     loadings <- princomp(x, scores=FALSE, na.action=na.fail)$loadings
+    if(abs.)
+        loadings <- abs(loadings)
 
     if(!is.numeric(npc) || npc < 1)
         stop("invalid npc")

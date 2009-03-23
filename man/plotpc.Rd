@@ -56,14 +56,16 @@ plotpc(x,
                  axis.len.xony=xrange/2.5, gp.axis.xony=gpar(col=1))
 }
 \arguments{
-Many users will find that they need only the first argument.
-The \code{xrange} argument can be used to add whitespace around the histograms.
-Set \code{hist=FALSE} to plot densities rather than histograms.
+Many users will find that they need only the first argument.\cr
+Use the \code{xrange} argument to add whitespace around the histograms.\cr
+Set \code{hist=FALSE} to plot densities rather than histograms.\cr
+Use \code{heightx} and the height arguments to adjust
+the height of histograms or to remove histograms from the plot.\cr
 Use \code{offset1} and the other offset arguments to adjust
-the positions of the histograms relative to the center of the graph.
+the positions of the histograms relative to the center of the graph.\cr
 Use \code{angle1} and the other angle arguments to add extra histograms
-to the plot at arbitrary angles.
-Use \code{yonx} to add a linear regression line to the plot.
+to the plot at arbitrary angles.\cr
+Use \code{yonx} and \code{xony} to add linear regression lines to the plot.
     \item{x}{
       A two column matrix or dataframe.
       The principal components of the \code{x} will be calculated
@@ -313,7 +315,7 @@ Use \code{yonx} to add a linear regression line to the plot.
       Default \code{NULL}, meaning use \code{gp.text}.
     }
     \item{axis.len.yonx}{
-      Length of regression line in \code{gpar "native"} units.
+      Length of regression line in \code{\link[grid]{gpar}} \code{"native"} units.
       Default \code{-xrange/2.5}.
     }
     \item{gp.axis.yonx}{
@@ -327,7 +329,8 @@ Use \code{yonx} to add a linear regression line to the plot.
 }
 \value{
 Invisibly returns the \code{\link[grid]{viewport}} used to create the
-\code{plotpc} axes This allows you to add text using the
+\code{plotpc} axes.
+This allows you to add text using the
 \code{"native"} coordinates of the plot.  See the examples below.
 }
 \note{
@@ -405,7 +408,7 @@ grid.text("X1",  x=un(2.2), y=un(1.4),  gp=gpar(cex=.8, font=2))
 grid.text("X2",  x=un(4.3), y=un(2.5),  gp=gpar(cex=.8, font=2))
 popViewport()
 
-# example comparing linear regression to principal component
+# example comparing linear regression to principal axis
 x <- iris[iris$Species=="setosa",c(3,4)]
 vp <- plotpc(x,
        main="Example 5:\nRegression lines and\nfirst principal component",

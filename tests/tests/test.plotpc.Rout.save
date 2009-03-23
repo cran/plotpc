@@ -75,7 +75,7 @@ plotpc> grid.text("X2",  x=un(4.3), y=un(2.5),  gp=gpar(cex=.8, font=2))
 
 plotpc> popViewport()
 
-plotpc> # example comparing linear regression to principal component
+plotpc> # example comparing linear regression to principal axis
 plotpc> x <- iris[iris$Species=="setosa",c(3,4)]
 
 plotpc> vp <- plotpc(x,
@@ -118,7 +118,8 @@ plotld> plotld(x)
 > 
 > library(alr3) # get banknote data
 > data(banknote)
-> plotld(banknote[,-7], npc=10) # -6 to drop Y
+> plotld(banknote[,-7], npc=10) # -7 to drop Y
+> plotld(banknote[,-7], abs.=TRUE)
 > 
 > # Flury and Riedwyl "Multivariate Statistics A Practical Approach" figure 10.2
 > x <- banknote[101:200,4:5] # select Forged, Top and Bottom
