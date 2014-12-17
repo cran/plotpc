@@ -1,6 +1,10 @@
 Changes to plotpc Package
 -------------------------
 
+1.0.3 Dec 17, 2014
+
+Minor tidy up for CRAN check.
+
 1.0-2 March 23, 2009
 
 Added "abs." argument to plotld

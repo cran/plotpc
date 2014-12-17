@@ -58,7 +58,7 @@ plotpc <- function(x, # x is a two column matrix or data.frame
          !is.na(angle) && !is.null(angle) && is.numeric(angle) && length(angle) == 1
 
     vp1 <- function(xscale, yscale, angle=0)
-        viewport(w=unit(.7, "npc"), h=unit(.7, "npc"), # .7 for whitespace
+        viewport(width=unit(.7, "npc"), height=unit(.7, "npc"), # .7 for whitespace
                  xscale=xscale, yscale=yscale, angle=angle)
 
     # get angle to rotate the text by, either 0 or 180, depending on angle1
