@@ -54,7 +54,7 @@ plotpc <- function(x, # x is a two column matrix or data.frame
 
     to.degrees <- function(angle) angle <- 180 * angle / pi
 
-    is.valid <- function(angle) 
+    is.valid <- function(angle)
          !is.na(angle) && !is.null(angle) && is.numeric(angle) && length(angle) == 1
 
     vp1 <- function(xscale, yscale, angle=0)
@@ -117,7 +117,7 @@ plotpc <- function(x, # x is a two column matrix or data.frame
                 if(flip1)
                     y1 <- -y1
                 # TODO would better spacing with "lines" not "native" for y1 below?
-                grid.text(text1, x=un(0), y=un(y1), gp=gp.text1, 
+                grid.text(text1, x=un(0), y=un(y1), gp=gp.text1,
                           rot=get.rot(angle1-pi))
             }
         }
@@ -154,10 +154,10 @@ plotpc <- function(x, # x is a two column matrix or data.frame
     if(is.null(ylab))
         ylab <- colnames(x)[2]
 
-    xmean <- mean(x[,1])
+    xmean <- mean(x[,1], na.rm=FALSE)
     if(is.na(xmean))
         stop("NA in x[,1]")
-    ymean <- mean(x[,2])
+    ymean <- mean(x[,2], na.rm=FALSE)
     if(is.na(ymean))
         stop("NA in x[,2]")
     x <- scale(x, scale=FALSE) # mean-center x
@@ -168,7 +168,7 @@ plotpc <- function(x, # x is a two column matrix or data.frame
     if(xrange <= 0)
         stop("xrange <= 0")
 
-    pc <- princomp(x[,1:2], scores=TRUE, na.action=na.fail)
+    pc <- princomp(x[,1:2], scores=TRUE)
     offset.default <- xrange / 3
     grid.newpage()
 

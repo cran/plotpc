@@ -1,5 +1,5 @@
 # test.plotpc.R
-# This is just a dummy test. Full tests can be found in tests/tests.
+# This is just a dummy test. Full tests can be found in tests/slowtests.
 library(grid)
 library(plotpc)
 data(iris)

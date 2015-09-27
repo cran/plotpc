@@ -1,6 +1,6 @@
 Package: plotpc
-Version: 1.0.3
-Title: Plot principal component histograms around a scatter plot.
+Version: 1.0.4
+Title: Plot Principal Component Histograms Around a Scatter Plot
 Author: Stephen Milborrow
 Maintainer: Stephen Milborrow <milbo@sonic.net>
 Depends: grid
@@ -8,7 +8,7 @@ Description: Plot principal component histograms around a bivariate
         scatter plot.
 License: GPL-3
 URL: http://www.milbo.users.sonic.net
-Packaged: 2014-12-17 18:18:24 UTC; milbo
+Packaged: 2015-09-26 11:21:33 UTC; milbo
 Repository: CRAN
-Date/Publication: 2014-12-17 23:30:49
+Date/Publication: 2015-09-27 09:27:05
 NeedsCompilation: no

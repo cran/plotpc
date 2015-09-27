@@ -13,7 +13,9 @@ plotld <- function(x,  # x is passed directly to princomp
     legend.x=NULL,
     legend.y=NULL)
 {
-    loadings <- princomp(x, scores=FALSE, na.action=na.fail)$loadings
+    loadings <- princomp(x, scores=FALSE)$loadings
+    if(anyNA(loadings))
+        stop("NA in loadings")
     if(abs.)
         loadings <- abs(loadings)
 
